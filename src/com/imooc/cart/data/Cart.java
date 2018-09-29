@@ -24,8 +24,8 @@ public class Cart {
 
     public boolean decProd(){
         count--;
-        if(count>0){
-            totalPrice = price*count;
+        totalPrice = price*count;
+        if(count==0){
             return true;
         }
         return false;

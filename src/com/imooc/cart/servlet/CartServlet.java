@@ -27,5 +27,27 @@ public class CartServlet extends HttpServlet {
             request.setAttribute("carts",LocalCache.getCart());
             request.getRequestDispatcher("/WEB-INF/view/biz/cart.jsp").forward(request,response);
         }
+        else if(Objects.equals("/cart/delete.do",request.getServletPath())){
+            String productId = request.getParameter("productId");
+            if(productId != null){
+                LocalCache.decCart(Long.valueOf(productId));
+            }
+            response.sendRedirect("/cart/list.do");
+        }
+        else if(Objects.equals("/cart/decr.do",request.getServletPath())){
+            String productId = request.getParameter("productId");
+            if(productId != null){
+                LocalCache.decProd(Long.valueOf(productId));
+            }
+            response.sendRedirect("/cart/list.do");
+        }
+        else if(Objects.equals("/cart/incr.do",request.getServletPath())){
+            String productId = request.getParameter("productId");
+            if(productId != null){
+                LocalCache.inctProd(Long.valueOf(productId));
+            }
+            response.sendRedirect("/cart/list.do");
+        }
+
     }
 }

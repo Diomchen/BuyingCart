@@ -45,7 +45,21 @@
         <servlet-name>ProductServlet</servlet-name>
         <url-pattern>/product/list.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart/delete.do</url-pattern>
+    </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart/decr.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart/incr.do</url-pattern>
+    </servlet-mapping>
     <!--<error-page>-->
         <!--<error-code>404</error-code>-->
         <!--<location>/WEB-INF/view/error/404.jsp</location>-->

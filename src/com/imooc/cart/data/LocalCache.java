@@ -51,13 +51,16 @@ public class LocalCache {
         productCart.get(productId).inctProd();
     }
 
-//    public static void decCart(Product product){
-//        decProd(product);
-//    }
-//
-//    public static boolean decProd(Product product){
-//        return productCart.get(product.getId()).decProd();
-//    }
+    public static void decCart(Long productId){
+        productCart.remove(productId);
+    }
+
+    public static void decProd(Long productId){
+         boolean result =  productCart.get(productId).decProd();
+         if(result){
+             productCart.remove(productId);
+         }
+    }
 
 
 }
