@@ -1,5 +1,6 @@
 package com.imooc.cart.servlet;
 
+import com.imooc.cart.data.Cart;
 import com.imooc.cart.data.LocalCache;
 import com.imooc.cart.data.Product;
 
@@ -48,6 +49,18 @@ public class CartServlet extends HttpServlet {
             }
             response.sendRedirect("/cart/list.do");
         }
+        else if(Objects.equals("/cart/settlement.do",request.getServletPath())){
+            String[] productId = request.getParameterValues("carts");
+            int totalPrice = 0;
+            for(int i=0 ; i<productId.length ; i++ ){
+                Cart cart = LocalCache.getCarts(Long.valueOf(productId[i]));
+                totalPrice += cart.getTotalPrice();
+                LocalCache.decCart(cart.getId());
+            }
+            request.setAttribute("totalPrice",totalPrice);
+            request.getRequestDispatcher("/WEB-INF/view/biz/settlement.jsp").forward(request,response);
+        }
+
 
     }
 }

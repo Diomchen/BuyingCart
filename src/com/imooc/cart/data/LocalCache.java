@@ -62,5 +62,9 @@ public class LocalCache {
          }
     }
 
+    public static Cart getCarts(Long productId){
+        return productCart.get(productId);
+    }
+
 
 }

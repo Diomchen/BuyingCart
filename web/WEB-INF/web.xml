@@ -60,6 +60,11 @@
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/cart/incr.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart/settlement.do</url-pattern>
+    </servlet-mapping>
     <!--<error-page>-->
         <!--<error-code>404</error-code>-->
         <!--<location>/WEB-INF/view/error/404.jsp</location>-->
