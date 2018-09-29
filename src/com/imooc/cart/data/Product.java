@@ -2,13 +2,13 @@ package com.imooc.cart.data;
 
 public class Product {
     private String name;
-    private String id;
+    private Long id;
     private String tag;
     private String desc;
     private String level;
     private int price;
 
-    public Product(String name,String id,String tag,String desc,String level,int price){
+    public Product(String name,Long id,String tag,String desc,String level,int price){
         this.name = name;
         this.id = id;
         this.tag = tag;
@@ -25,11 +25,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

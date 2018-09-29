@@ -8,23 +8,56 @@ import java.util.Map;
 public class LocalCache {
     private static Map<Long,Product> productMap = new HashMap<>();
 
-    static {
-        productMap.put(1l,new Product("html","001","编程","编写静态网页，夯实web基础","A",100));
-        productMap.put(2l,new Product("css","002","编程","编写静态网页，夯实web基础","B",200));
-        productMap.put(3l,new Product("javascript","003","编程","编写静态网页，夯实web基础","C",300));
-        productMap.put(4l,new Product("java","004","编程","编写静态网页，夯实web基础","D",400));
-        productMap.put(5l,new Product("C++","005","编程","编写静态网页，夯实web基础","E",500));
-        productMap.put(6l,new Product("C","006","编程","编写静态网页，夯实web基础","F",600));
-        productMap.put(7l,new Product("Ruby","007","编程","编写静态网页，夯实web基础","G",700));
-        productMap.put(8l,new Product("Python","008","编程","编写静态网页，夯实web基础","H",800));
-        productMap.put(9l,new Product("iOS","009","编程","编写静态网页，夯实web基础","I",900));
-        productMap.put(10l,new Product("Matlab","010","编程","编写静态网页，夯实web基础","J",1000));
-        productMap.put(11l,new Product("PHP","011","编程","编写静态网页，夯实web基础","K",1100));
-        productMap.put(12l,new Product("Golang","012","编程","编写静态网页，夯实web基础","L",1200));
+    private static Map<Long,Cart> productCart = new HashMap<>();
 
+    static {
+        productMap.put(1l,new Product("html",1l,"编程","编写静态网页，夯实web基础","A",100));
+        productMap.put(2l,new Product("css",2l,"编程","编写静态网页，夯实web基础","B",200));
+        productMap.put(3l,new Product("javascript",3l,"编程","编写静态网页，夯实web基础","C",300));
+        productMap.put(4l,new Product("java",4l,"编程","编写静态网页，夯实web基础","D",400));
+        productMap.put(5l,new Product("C++",5l,"编程","编写静态网页，夯实web基础","E",500));
+        productMap.put(6l,new Product("C",6l,"编程","编写静态网页，夯实web基础","F",600));
+        productMap.put(7l,new Product("Ruby",7l,"编程","编写静态网页，夯实web基础","G",700));
+        productMap.put(8l,new Product("Python",8l,"编程","编写静态网页，夯实web基础","H",800));
+        productMap.put(9l,new Product("iOS",9l,"编程","编写静态网页，夯实web基础","I",900));
+        productMap.put(10l,new Product("Matlab",10l,"编程","编写静态网页，夯实web基础","J",1000));
+        productMap.put(11l,new Product("PHP",11l,"编程","编写静态网页，夯实web基础","K",1100));
+        productMap.put(12l,new Product("Golang",12l,"编程","编写静态网页，夯实web基础","L",1200));
+    }
+
+    public static List<Cart> getCart(){
+        return new ArrayList<>(productCart.values());
     }
 
     public static List<Product> getProduct(){
         return new ArrayList<>(productMap.values());
     }
+
+    public static Product getProducts(Long id){
+        return productMap.get(id);
+    }
+
+    public static void addCart(Product product){
+        if(!productCart.containsKey(product.getId())){
+            System.out.println(product.getId()+" "+product.getName());
+            productCart.put(product.getId(), new Cart(product.getId(),product.getName(),product.getId(),1,product.getPrice()));
+        }
+        else{
+            inctProd(product.getId());
+        }
+    }
+
+    public static void inctProd(Long productId){
+        productCart.get(productId).inctProd();
+    }
+
+//    public static void decCart(Product product){
+//        decProd(product);
+//    }
+//
+//    public static boolean decProd(Product product){
+//        return productCart.get(product.getId()).decProd();
+//    }
+
+
 }
