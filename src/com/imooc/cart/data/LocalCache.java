@@ -10,6 +10,8 @@ public class LocalCache {
 
     private static Map<Long,Cart> productCart = new HashMap<>();
 
+    private static Map<Long,Product> productFavorite = new HashMap<>();
+
     static {
         productMap.put(1l,new Product("html",1l,"编程","编写静态网页，夯实web基础","A",100));
         productMap.put(2l,new Product("css",2l,"编程","编写静态网页，夯实web基础","B",200));
@@ -66,5 +68,20 @@ public class LocalCache {
         return productCart.get(productId);
     }
 
+    public static void addFavorite(Product product){
+        if(!productFavorite.containsKey(product.getId())){
+            productFavorite.put(product.getId(),product);
+        }
+    }
+
+    public static void delFavorite(Product product){
+        if(productFavorite.containsKey(product.getId())){
+            productFavorite.remove(product.getId());
+        }
+    }
+
+    public static List<Product> getFavorites(){
+        return new ArrayList<>(productFavorite.values());
+    }
 
 }

@@ -60,7 +60,5 @@ public class CartServlet extends HttpServlet {
             request.setAttribute("totalPrice",totalPrice);
             request.getRequestDispatcher("/WEB-INF/view/biz/settlement.jsp").forward(request,response);
         }
-
-
     }
 }
