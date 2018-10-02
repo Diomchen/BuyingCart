@@ -59,31 +59,31 @@
         <!-- 课程列表 -->
         <div class="course-list">
             <div align="right">
-                <%--<a href="/product/list.do?page=1">首页</a>--%>
-                <%--<a href="/product/list.do?page=${prePage}">上一页</a>--%>
-                <%--<a href="/product/list.do?page=${nextPage}">下一页</a>--%>
-                <%--<a href="/product/list.do?page=${totalPage}">尾页</a>--%>
+                <a href="/product/list.do?page=1">首页</a>
+                <a href="/product/list.do?page=${prePage}">上一页</a>
+                <a href="/product/list.do?page=${nextPage}">下一页</a>
+                <a href="/product/list.do?page=${totalPage}">尾页</a>
 
-                <form method="post" action="/product/list.do" style="display: inline">
-                    <input type="hidden" name="page" value="1">
-                    <input type="hidden" name="title" value="${title}">
-                    <input type="submit" value="首页" class="btn">
-                </form>
-                <form method="post" action="/product/list.do" style="display: inline">
-                    <input type="hidden" name="page" value="${prePage}">
-                    <input type="hidden" name="title" value="${title}">
-                    <input type="submit" value="上一页" class="btn">
-                </form>
-                <form method="post" action="/product/list.do" style="display: inline">
-                    <input type="hidden" name="page" value="${nextPage}">
-                    <input type="hidden" name="title" value="${title}">
-                    <input type="submit" value="下一页" class="btn">
-                </form>
-                <form method="post" action="/product/list.do" style="display: inline">
-                    <input type="hidden" name="page" value="${totalPage}">
-                    <input type="hidden" name="title" value="${title}">
-                    <input type="submit" value="尾页" class="btn">
-                </form>
+                <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                    <%--<input type="hidden" name="page" value="1">--%>
+                    <%--<input type="hidden" name="title" value="${title}">--%>
+                    <%--<input type="submit" value="首页" class="btn">--%>
+                <%--</form>--%>
+                <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                    <%--<input type="hidden" name="page" value="${prePage}">--%>
+                    <%--<input type="hidden" name="title" value="${title}">--%>
+                    <%--<input type="submit" value="上一页" class="btn">--%>
+                <%--</form>--%>
+                <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                    <%--<input type="hidden" name="page" value="${nextPage}">--%>
+                    <%--<input type="hidden" name="title" value="${title}">--%>
+                    <%--<input type="submit" value="下一页" class="btn">--%>
+                <%--</form>--%>
+                <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                    <%--<input type="hidden" name="page" value="${totalPage}">--%>
+                    <%--<input type="hidden" name="title" value="${title}">--%>
+                    <%--<input type="submit" value="尾页" class="btn">--%>
+                <%--</form>--%>
                 第${curPage}页/共${totalPage}页
             </div>
             <c:forEach items="${products}" var="product">
@@ -117,31 +117,31 @@
             </c:forEach>
         </div>
         <div align="right">
-            <%--<a href="/product/list.do?page=1">首页</a>--%>
-            <%--<a href="/product/list.do?page=${prePage}">上一页</a>--%>
-            <%--<a href="/product/list.do?page=${nextPage}">下一页</a>--%>
-            <%--<a href="/product/list.do?page=${totalPage}">尾页</a>--%>
+            <a href="/product/list.do?page=1">首页</a>
+            <a href="/product/list.do?page=${prePage}">上一页</a>
+            <a href="/product/list.do?page=${nextPage}">下一页</a>
+            <a href="/product/list.do?page=${totalPage}">尾页</a>
 
-            <form method="post" action="/product/list.do" style="display: inline">
-                <input type="hidden" name="page" value="1">
-                <input type="hidden" name="title" value="${title}">
-                <input type="submit" value="首页" class="btn">
-            </form>
-            <form method="post" action="/product/list.do" style="display: inline">
-                <input type="hidden" name="page" value="${prePage}">
-                <input type="hidden" name="title" value="${title}">
-                <input type="submit" value="上一页" class="btn">
-            </form>
-            <form method="post" action="/product/list.do" style="display: inline">
-                <input type="hidden" name="page" value="${nextPage}">
-                <input type="hidden" name="title" value="${title}">
-                <input type="submit" value="下一页" class="btn">
-            </form>
-            <form method="post" action="/product/list.do" style="display: inline">
-                <input type="hidden" name="page" value="${totalPage}">
-                <input type="hidden" name="title" value="${title}">
-                <input type="submit" value="尾页" class="btn">
-            </form>
+            <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                <%--<input type="hidden" name="page" value="1">--%>
+                <%--<input type="hidden" name="title" value="${title}">--%>
+                <%--<input type="submit" value="首页" class="btn">--%>
+            <%--</form>--%>
+            <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                <%--<input type="hidden" name="page" value="${prePage}">--%>
+                <%--<input type="hidden" name="title" value="${title}">--%>
+                <%--<input type="submit" value="上一页" class="btn">--%>
+            <%--</form>--%>
+            <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                <%--<input type="hidden" name="page" value="${nextPage}">--%>
+                <%--<input type="hidden" name="title" value="${title}">--%>
+                <%--<input type="submit" value="下一页" class="btn">--%>
+            <%--</form>--%>
+            <%--<form method="post" action="/product/list.do" style="display: inline">--%>
+                <%--<input type="hidden" name="page" value="${totalPage}">--%>
+                <%--<input type="hidden" name="title" value="${title}">--%>
+                <%--<input type="submit" value="尾页" class="btn">--%>
+            <%--</form>--%>
             第${curPage}页/共${totalPage}页
         </div>
     </div>

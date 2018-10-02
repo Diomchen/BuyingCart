@@ -26,6 +26,5 @@ public class BrowseServlet extends HttpServlet {
                 response.sendRedirect("/browse/list.do");
             }
         }
-
     }
 }

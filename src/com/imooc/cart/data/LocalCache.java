@@ -27,6 +27,7 @@ public class LocalCache {
         productMap.put(10l,new Product("Matlab",10l,"编程","编写静态网页，夯实web基础","J",1000));
         productMap.put(11l,new Product("PHP",11l,"编程","编写静态网页，夯实web基础","K",1100));
         productMap.put(12l,new Product("Golang",12l,"编程","编写静态网页，夯实web基础","L",1200));
+        productMap.put(13l,new Product("Golang",13l,"编程","编写静态网页，夯实web基础","L",1200));
     }
 
     public static List<Cart> getCart(){
@@ -96,6 +97,13 @@ public class LocalCache {
 
     public static void delBrowseLog(Product product){
         productBrowseLog.remove(product.getId());
+    }
+
+    public static List<Product> getProduct(int page,int size){
+        List<Product> midProduct = new ArrayList<>(productMap.values());
+        int start = (page-1)*size;
+        int end = page*size>productMap.size()?midProduct.size() : page*size;
+        return midProduct.subList(start,end);
     }
 
 }
