@@ -35,6 +35,16 @@
         <servlet-name>FavoriteServlet</servlet-name>
         <servlet-class>com.imooc.cart.servlet.FavoriteServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>DetailServlet</servlet-name>
+        <servlet-class>com.imooc.cart.servlet.DetailServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>BrowseServlet</servlet-name>
+        <servlet-class>com.imooc.cart.servlet.BrowseServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
@@ -84,6 +94,21 @@
     <servlet-mapping>
         <servlet-name>FavoriteServlet</servlet-name>
         <url-pattern>/favorite/delete.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DetailServlet</servlet-name>
+        <url-pattern>/detail/detail.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BrowseServlet</servlet-name>
+        <url-pattern>/browse/list.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BrowseServlet</servlet-name>
+        <url-pattern>/browse/delete.do</url-pattern>
     </servlet-mapping>
     <!--<error-page>-->
         <!--<error-code>404</error-code>-->

@@ -12,6 +12,8 @@ public class LocalCache {
 
     private static Map<Long,Product> productFavorite = new HashMap<>();
 
+    private static Map<Long,Product> productBrowseLog = new HashMap<>();
+
     static {
         productMap.put(1l,new Product("html",1l,"编程","编写静态网页，夯实web基础","A",100));
         productMap.put(2l,new Product("css",2l,"编程","编写静态网页，夯实web基础","B",200));
@@ -33,6 +35,10 @@ public class LocalCache {
 
     public static List<Product> getProduct(){
         return new ArrayList<>(productMap.values());
+    }
+
+    public static List<Product> getBrowse(){
+        return new ArrayList<>(productBrowseLog.values());
     }
 
     public static Product getProducts(Long id){
@@ -82,6 +88,14 @@ public class LocalCache {
 
     public static List<Product> getFavorites(){
         return new ArrayList<>(productFavorite.values());
+    }
+
+    public static void addBrowseLog(Product product){
+        productBrowseLog.put(product.getId(),product);
+    }
+
+    public static void delBrowseLog(Product product){
+        productBrowseLog.remove(product.getId());
     }
 
 }
